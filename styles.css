@@ -1,0 +1,149 @@
+body {
+    background-color: #101010; /* Fond de site en couleur #101010 */
+    margin: 0; /* Réinitialiser les marges pour un remplissage complet de l'écran */
+    cursor: none; /* Cacher le curseur par défaut */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+#custom-cursor:hover {
+    transform: scale(2); /* Scale up the cursor when it's hovered */
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none; /* Permettre aux événements de souris de passer à travers */
+    z-index: 9999; /* Assurez-vous que le curseur personnalisé est au-dessus de tout */
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease; /* Add a transition for the scale property */
+}
+
+#custom-cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    pointer-events: none;
+    animation: cursor-move 0.2s ease-in-out infinite;
+}
+  
+@keyframes cursor-move {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-5px, 5px); }
+    100% { transform: translate(0, 0); }
+}
+
+body, html {
+    height: 100%; /* Utilise 100% de la hauteur de la fenêtre */
+}
+
+/* Désactiver le surlignement bleu */
+::selection {
+    background-color: transparent;
+}
+  
+  /* Désactiver le surlignement bleu pour les liens */
+a::selection {
+    background-color: transparent;
+}
+
+
+#video-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #afafaf; /* Couleur du texte */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transition de couleur */
+}
+  
+  button:hover {
+    color: #ffffff; /* Changement de couleur au survol */
+}
+
+.redirect-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 2px solid #ffffff; /* Ajoute un bord de 2px solide blanc */
+    border-radius: 20px; /* Coins arrondis */
+    cursor: none;
+    font-family: "Freeman", sans-serif;
+    z-index: 10000; /* Assurez-vous que le bouton est au-dessus de la vidéo */
+    font-family: "Anonymous Pro", monospace;
+}
+  
+.redirect-button:hover {
+    color: #afafaf;
+}
+
+#background-video {
+    opacity: 0.3; /* Set opacity to 70% */
+    object-fit: cover; /* Ensure video covers the entire container */
+    width: 100%;
+    height: 100vh; /* Set height to full viewport height */
+}
+
+
+/* Modified styles for the terminal container and terminal */
+#terminal-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Center the terminal horizontally */
+    transform: translateX(-50%); /* Center the terminal horizontally */
+    width: 100%; /* Reduce the width of the terminal */
+    padding: 10px; /* Reduce the padding */
+    background-color: #000;
+    border: none; /* Remove border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+.terminal {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 14px; /* Reduce font size */
+    color: #fff;
+    padding: 10px; /* Reduce padding */
+    background-color: #000;
+}
+  
+.terminal::before {
+    content: ">> read: "; /* Add "read: " prompt */
+    color: #ffffff;
+}
+  
+  /* Add a text input field after the "read: " prompt */
+.terminal input[type="text"] {
+    width: 100%;
+    height: 20px;
+    padding: 5px;
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: none;
+}
+
+#terminal-input.focused {
+    background-color: transparent;
+}
