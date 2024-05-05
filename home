@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced - Be careful, you're best!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Freeman|Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/x-icon">
+</head>
+<body oncontextmenu="return false;">
+  <div id="custom-cursor"></div>
+  <div id="video-container">
+    <video id="background-video" autoplay loop muted>
+      <source src="back.mp4" type="video/mp4">
+    </video>
+    <a href="#" class="redirect-button">Access</a>
+  </div>
+  <div id="terminal-container">
+    <div id="terminal" class="terminal">
+      <input type="text" id="terminal-input" />
+      <audio id="keyboard-sound" src="sounds/effectkeyboard.mp3"></audio>
+      <div id="terminal-output"></div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
